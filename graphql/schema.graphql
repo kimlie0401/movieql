@@ -1,15 +1,24 @@
+# type Movie {
+#   id: Int!
+#   name: String!
+#   score: Int!
+# }
 type Movie {
-  id: Int!
+  _id: ID!
   name: String!
-  score: Int!
+  score: Int
 }
-
 type Query {
-  movies: [Movie]!
-  movie(id: Int!): Movie
+  getMovie(_id: ID!): Movie
+  allMovies: [Movie]
 }
 
+input MovieInput {
+  name: String!
+  score: Int
+}
 type Mutation {
-  addMovie(name: String!, score: Int!): Movie!
-  deleteMovie(id: Int!): 
+  createMovie(input: MovieInput): Movie
+  updateMovie(_id: ID!, input: MovieInput): Movie
+  deleteMovie(_id: ID!): Movie
 }
