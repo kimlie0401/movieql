@@ -2,17 +2,28 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 const MovieSchema = new Schema({
   id: {
-    type: Number
+    type: Number,
+    required: true
   },
-  name: {
+  title: {
     type: String,
     required: true
   },
-  score: {
-    type: Number
+  rating: {
+    type: Number,
+    required: true
   },
-  year: {
-    type: Number
+  summary: {
+    type: String,
+    required: true
+  },
+  language: {
+    type: String,
+    required: true
+  },
+  medium_cover_image: {
+    type: String,
+    required: true
   }
 });
 mongoose.set("useFindAndModify", false);

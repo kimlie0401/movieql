@@ -1,10 +1,12 @@
-import { getMovies, getById, addMovie, deleteMovie } from "./db";
+import { getMovies, getMovie, getSuggestions } from "./db";
 import Movie from "../models/movie";
 
 const resolvers = {
   Query: {
-    // movies: () => getMovies(),
-    // movie: (_, { id }) => getById(id),
+    movies: (_, { rating, limit }) => getMovies(limit, rating),
+    movie: (_, { id }) => getMovie(id),
+    suggestions: (_, { id }) => getSuggestions(id),
+
     async getMovie(root, { _id }) {
       return await Movie.findById(_id);
     },
