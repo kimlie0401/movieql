@@ -5,6 +5,8 @@
 # }
 type Movie {
   _id: ID!
+  id: Int
+  year: Int
   name: String!
   score: Int
 }
@@ -14,6 +16,8 @@ type Query {
 }
 
 input MovieInput {
+  id: Int
+  year: Int!
   name: String!
   score: Int
 }
