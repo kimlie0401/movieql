@@ -13,6 +13,8 @@ type Movie {
   medium_cover_image: String
   genres: [String]
 }
+# add genres
+
 type Query {
   movies(limit: Int, rating: Float): [Movie]!
   movie(id: Int!): Movie
