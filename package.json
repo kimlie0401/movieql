@@ -12,10 +12,7 @@
     "mongoose": "^5.7.1",
     "mysql2": "^1.7.0",
     "node-fetch": "^2.6.0",
-    "saslprep": "^1.0.3",
-    "babel-node": "^0.0.1-security",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-3": "^6.24.1"
+    "saslprep": "^1.0.3"
   },
   "scripts": {
     "start": "nodemon --exec babel-node index.js"
