@@ -10,6 +10,7 @@ type Movie {
   rating: Float
   summary: String
   language: String
+  description_intro: String
   medium_cover_image: String
   genres: [String]
 }
